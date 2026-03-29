@@ -1,0 +1,48 @@
+<!--Create bmi.html + bmi.js
+
+The page shows:
+- Two inputs — height (cm) and weight (kg)
+- A "Calculate" button
+- Result showing:
+  - The BMI number (1 decimal place)
+  - A category label:
+      Underweight  → BMI < 18.5
+      Normal       → 18.5 – 24.9
+      Overweight   → 25 – 29.9
+      Obese        → BMI ≥ 30
+  - A visual indicator bar showing where 
+    the user falls on the BMI scale
+- Input validation:
+  - Height and weight must be positive numbers
+  - Show clear error messages if not
+- Last result saved to localStorage
+
+No libraries. No frameworks.---> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <div id = "bmi-calculator">
+        <h1>BMI Calculator</h1>
+        <div class = "input-group">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+        </div>
+        <div class = "input-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+        </div>
+        <button id="calculate-btn">Calculate</button>
+        <div id="result"></div>
+        <div id="bmiIndicator" aria-label="BMI level indicator" role="progressbar"></div>
+    </div>
+    <script src="bmi.js"></script>
+    
+</body>
+</html>
